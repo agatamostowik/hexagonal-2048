@@ -1,0 +1,81 @@
+.board {
+  align-items: center;
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  margin-left: -15px;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.cell {
+  background-color: #e9e5e1;
+  width: 100px;
+  height: 100px;
+  /* https://bennettfeely.com/clippy/ */
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0 50%);
+}
+
+.hex {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0 50%);
+  width: 100px;
+  height: 100px;
+  color: black;
+}
+.no2 {
+  background-color: rgb(166, 220, 251);
+}
+.no4 {
+  background-color: rgb(102, 195, 249);
+}
+.no8 {
+  background-color: rgb(12, 158, 243);
+}
+.no16 {
+  background-color: rgb(4, 125, 196);
+}
+.no32 {
+  background-color: rgb(3, 98, 153);
+}
+.no64 {
+  background-color: rgb(140, 137, 247);
+}
+.no128 {
+  background-color: rgb(90, 60, 199);
+}
+.no256 {
+  background-color: rgb(66, 43, 148);
+}
+.no512 {
+  background-color: rgb(235, 163, 248);
+}
+.no1024 {
+  background-color: rgb(224, 85, 248);
+}
+.no2048 {
+  background-color: rgb(154, 25, 176);
+}
+
+.status {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.status span {
+  margin-left: 5px;
+}
