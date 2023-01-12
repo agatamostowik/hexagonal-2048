@@ -51,7 +51,7 @@ export const Game = (props) => {
       const url =
         hostname === "localhost"
           ? `http://${hostname}:3001/api/${radius}`
-          : `http://${hostname}/${radius}`;
+          : `https://${hostname}/${radius}`;
 
       const additionalCellFromServer = await getCells(url, newData);
 
