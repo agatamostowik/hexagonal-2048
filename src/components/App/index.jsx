@@ -11,8 +11,6 @@ export const App = () => {
     const radius = parseInt(params.get("radius"));
     const hostname = params.get("hostname");
 
-    console.log("hostname:", hostname);
-
     return <Game radius={radius} hostname={hostname} />;
   } else {
     return <Form />;
