@@ -30,16 +30,21 @@ export const Form = () => {
     setSearchParams(searchParams.toString());
   };
 
+  const isDevelopment = process.env.NODE_ENV === "development";
+
   return (
     <form className="form_container" onSubmit={handleSubmit}>
-      <div className="form_paragraph">
-        <label htmlFor="hostname">Hostname</label>
-        <select id="hostname" value={hostname} onChange={changeHostname}>
-          {serverOptions.map((option, index) => (
-            <option key={index}>{option.hostname}</option>
-          ))}
-        </select>
-      </div>
+      <h2>Hexagonal 2048</h2>
+      {isDevelopment ? (
+        <div className="form_paragraph">
+          <label htmlFor="hostname">Hostname</label>
+          <select id="hostname" value={hostname} onChange={changeHostname}>
+            {serverOptions.map((option, index) => (
+              <option key={index}>{option.hostname}</option>
+            ))}
+          </select>
+        </div>
+      ) : null}
       <div className="form_paragraph">
         <label htmlFor="radius">Radius:{radius}</label>
         <input
